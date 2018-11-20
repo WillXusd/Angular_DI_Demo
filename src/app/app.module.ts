@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { Product1Component } from './product1/product1.component';
 import { ProductService } from './shared/product.service';
 import { Product2Component } from './product2/product2.component';
+import { LoggerService } from './shared/logger.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Product2Component } from './product2/product2.component';
     BrowserModule
   ],
   //把service声明到providers里面
-  providers: [ProductService],
+  //当提供器声明到providers时，他是对所有组件可见的，所有组件都可以注入他 
+  providers: [ProductService，LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
