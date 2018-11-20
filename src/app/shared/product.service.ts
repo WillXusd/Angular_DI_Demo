@@ -4,7 +4,7 @@ import { LoggerService } from './logger.service';
 @Injectable()
 export class ProductService {
 
-  constructor(private logger:LoggerService) { }
+  constructor(public logger:LoggerService) { }
 
   //声明一个getProduct方法，返回一个Product对象
   getProduct(): Product {
